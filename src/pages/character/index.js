@@ -7,6 +7,9 @@ function Character() {
 
   const [results, setResults] = useState([]);
 
+
+
+
   useEffect(() => {
     // Utiliza la 'id' en la solicitud a la API
     fetch(`https://rickandmortyapi.com/api/character/${id}`)
@@ -17,9 +20,13 @@ function Character() {
       .catch((error) => console.log(error));
   }, [id]); // Asegúrate de incluir 'id' como dependencia
 
+  
+
   return (
     <div>
       <FeedCharacters />
+
+      {}
     </div>
   );
 }
