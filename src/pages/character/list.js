@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import {Table, Row, Col} from 'react-bootstrap';
+import {Row, Col} from 'react-bootstrap';
 
 function Character() {
   const { id } = useParams(); // Obtén la 'id' dinámica desde la URL
