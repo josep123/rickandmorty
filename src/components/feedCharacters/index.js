@@ -12,16 +12,20 @@ function FeedCharacters() {
       fetch(`https://rickandmortyapi.com/api/character/?name=${searchText}&page=${currentPage}`)
         .then((response) => response.json())
         .then((data) => {
-          setResults(data.results);
-          setTotalPages(data.info.pages);
+          if (data && data.results) {
+            setResults(data.results);
+            setTotalPages(data.info.pages);
+          }
         })
         .catch((error) => console.log(error));
     } else {
       fetch(`https://rickandmortyapi.com/api/character?page=${currentPage}`)
         .then((response) => response.json())
         .then((data) => {
-          setResults(data.results);
-          setTotalPages(data.info.pages);
+          if (data && data.results) {
+            setResults(data.results);
+            setTotalPages(data.info.pages);
+          }
         })
         .catch((error) => console.log(error));
     }
@@ -46,56 +50,59 @@ function FeedCharacters() {
   return (
     <div>
       <Row className="justify-content-md-left">
-       
       </Row>
-        
+
       <h2 className="titles">
         - <span className="whiteTitle">Select your character</span> -
       </h2>
 
-      <Row>
-         <center> <input
-            type="text"
-            placeholder="Choose your favourite Character"
-            className="Buscador"
-            value={searchText}
-            onChange={handleInputChange}
-          />
-         </center>
+      <center>
+        <input
+          type="text"
+          placeholder="Choose your favourite Character"
+          className="Buscador"
+          value={searchText}
+          onChange={handleInputChange}
+        />
+      </center>
+
+      {results.length > 0 && (
+        <Row className="feedlocation">
+          {results.map((character) => (
+            <Col xs={12} md={6} lg={3} key={character.id}>
+              <a href={`/character/${character.id}`}>
+                <div className="card">
+                  <img src={character.image} alt={character.name} />
+                  <p>
+                    <div className="StatusGreen"> </div>
+                    {character.name}
+                  </p>
+                </div>
+              </a>
+            </Col>
+          ))}
         </Row>
-      
-       <Row className="feedlocation">
-        {results.map((character) => (
-          <Col xs={12} md={6} lg={3} key={character.id}>
-            <a href={`/character/${character.id}`}>
-              <div className="card">
-                <img src={character.image} alt={character.name} />
-                <p>
-                  <div className="StatusGreen"> </div>
-                  {character.name}
-                </p>
-              </div>
-            </a>
-          </Col>
-        ))}
-      </Row>
-      <Row className="botonsBottom">
+      )}
+
+      {results.length > 0 && (
+        <Row className="botonsBottom">
           <Col>
-         <p className="botonLeft"> <Button className="botonMenu" onClick={handlePrevPage} disabled={currentPage === 1}>
-            Previous Page
-          </Button></p>
-        </Col>
+            <p className="botonLeft">
+              <Button className="botonMenu" onClick={handlePrevPage} disabled={currentPage === 1}>
+                Previous Page
+              </Button>
+            </p>
+          </Col>
           <Col></Col>
           <Col>
-         <p className="botonRight"> <Button className="botonMenu" onClick={handleNextPage} disabled={currentPage === totalPages}>
-            Next Page
-          </Button></p>
+            <p className="botonRight">
+              <Button className="botonMenu" onClick={handleNextPage} disabled={currentPage === totalPages}>
+                Next Page
+              </Button>
+            </p>
           </Col>
-
-
-      </Row>
-      
-          
+        </Row>
+      )}
     </div>
   );
 }
