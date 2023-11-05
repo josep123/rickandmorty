@@ -46,21 +46,23 @@ function FeedCharacters() {
   return (
     <div>
       <Row className="justify-content-md-left">
-        <Col>
-          <input
+       
+      </Row>
+        
+      <h2 className="titles">
+        - <span className="whiteTitle">Select your character</span> -
+      </h2>
+
+      <Row>
+         <center> <input
             type="text"
             placeholder="Choose your favourite Character"
             className="Buscador"
             value={searchText}
             onChange={handleInputChange}
           />
-         
-        </Col>
-      </Row>
-        
-      <h2 className="titles">
-        - <span className="whiteTitle">Select your character</span> -
-      </h2>
+         </center>
+        </Row>
       
        <Row className="feedlocation">
         {results.map((character) => (
@@ -77,12 +79,23 @@ function FeedCharacters() {
           </Col>
         ))}
       </Row>
-      <Button className="botonMenu" onClick={handlePrevPage} disabled={currentPage === 1}>
+      <Row className="botonsBottom">
+          <Col>
+         <p className="botonLeft"> <Button className="botonMenu" onClick={handlePrevPage} disabled={currentPage === 1}>
             Previous Page
-          </Button>
-          <Button className="botonMenu" onClick={handleNextPage} disabled={currentPage === totalPages}>
+          </Button></p>
+        </Col>
+          <Col></Col>
+          <Col>
+         <p className="botonRight"> <Button className="botonMenu" onClick={handleNextPage} disabled={currentPage === totalPages}>
             Next Page
-          </Button>
+          </Button></p>
+          </Col>
+
+
+      </Row>
+      
+          
     </div>
   );
 }

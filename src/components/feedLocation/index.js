@@ -50,12 +50,21 @@ function FeedLocation() {
         ))}
       </Row>
 
-      <Button className="botonMenu" onClick={handlePrevPage} disabled={currentPage === 1}>
+      <Row className="botonsBottom">
+          <Col>
+         <p className="botonLeft"> <Button className="botonMenu" onClick={handlePrevPage} disabled={currentPage === 1}>
             Previous Page
-          </Button>
-          <Button className="botonMenu" onClick={handleNextPage} disabled={currentPage === totalPages}>
+          </Button></p>
+        </Col>
+          <Col></Col>
+          <Col>
+         <p className="botonRight"> <Button className="botonMenu" onClick={handleNextPage} disabled={currentPage === totalPages}>
             Next Page
-          </Button>
+          </Button></p>
+          </Col>
+
+
+      </Row>
     </div>
   );
 }

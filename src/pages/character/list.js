@@ -22,7 +22,7 @@ function Character() {
          <Row className="ficha">   
             <Col xs={12} md={12} lg={6}>
                 <div className="picFicha">
-               <center> <img src={results.image} alt={results.name} height="450px" /></center></div>
+               <center> <img src={results.image} alt={results.name} height="350px" className="picCharacter"/></center></div>
             
             </Col>
             <Col xs={12} md={12} lg={6}>

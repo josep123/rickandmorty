@@ -1,18 +1,21 @@
 .App {
-  text-align: center;
+
   background-color:#021400;
   min-height: 1300px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 15rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.header {
+  padding-top: 40px
 }
 
 .App-header {
@@ -46,6 +49,7 @@
   letter-spacing: -3px;
   margin-top:50px;
   text-transform: uppercase;
+  text-align:center
   
 }
 
@@ -56,7 +60,7 @@
   height: 50px;
   padding: 10px;
   border-radius: 30px;
-  color:#fff;
+
 }
 
 .Buscador:active{
@@ -98,6 +102,7 @@ footer {
   height: 230px;
   margin-bottom: -50px;
   background-color: #000;
+  padding: 40px 0px;
 
 
 }
@@ -142,16 +147,15 @@ footer {
 .botonMenu {
   background-color: rgb(140, 170, 114, 0);
   border: solid 2px rgb(140, 170, 114);
-  margin-top: 20px;
   font-weight:600;
   text-transform: uppercase;
-  margin-bottom: 40px;
+  margin-top:5px;
+
 }
 
 .botonMenu:hover {
   background-color: rgb(140, 170, 114);
   border: solid 2px rgb(140, 170, 114);
-  margin-top: 20px;
 }
 
 .botonMenu:focus {
@@ -195,7 +199,7 @@ ul a li{
  .titleType {
 
    background-color: #222;
-   line-height:120px;
+   padding: 40px;
  }
 
  .feedLocation {
@@ -215,6 +219,110 @@ ul a li{
    text-transform:uppercase
  }
 
+ .creditsFooterMe {
+  font-size:30px;
+  color:#ffF;
+  text-align:center;
+  font-weight: 700;
+  text-transform:uppercase;
+  margin-bottom: 30px;
+ }
+
+ .creditsFooterMe a{
+  color:#fff;
+ }
+
+ .descriptionHome {
+   text-align: center;
+   color:#fff;
+   font-size: 40px;
+   padding: 80px;
+ }
+
+ .buttonDown {
+   font-weight: 800;
+   font-size: 20px;
+   color: #E5AF00;
+   text-align:center
+ 
+
+ }
+
+ .buttonDown span {
+  border: solid 3px #fff;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+.buttonDown span:hover {
+  border: solid 3px #E5AF00;
+  background-color:#fff;
+  cursor:pointer;
+  border-radius: 2px ;
+  
+}
+
+.services {
+
+  margin-top: 200px;
+
+}
+
+.bGrey {background-color:#111;
+        font-size: 30px;
+        color: #fff;
+        font-weight: 600;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 60px;}
+.bYellow { background-color:#D49F00;
+          font-size: 30px;
+          color: #111;
+          font-weight: 600;
+          text-align: center;
+          text-transform: uppercase;
+          padding: 60px;}
+
+.subtitleHome {font-size:40px; 
+              font-weight: 900; 
+              letter-spacing:-3px; 
+              color:#fff;
+              text-transform: uppercase;
+              text-align:center;
+              margin-bottom: 50px;
+            }
 
 
+.textWhite {color:#fff;}
+.textBlack {color:#111;}
+
+
+.botonleft {
+  text-align: right
+}
+.botonRight {
+  text-align: right
+}
+
+.botonsBottom {
+margin-top: 40px;
+padding-bottom: 50px;
+}
+
+.botonSup {
+  text-align:center;
+  margin-top: 20px;
+}
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .logoSup {
+    text-align:center;
+    margin-top: 20px;
+  }
+  }
+
+
+.picCharacter {padding: 30px;}
 

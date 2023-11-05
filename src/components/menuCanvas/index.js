@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import {Offcanvas, Button} from 'react-bootstrap';
+import {Offcanvas, Button, Col} from 'react-bootstrap';
 
 
 
@@ -13,13 +13,13 @@ function MenuCanvas() {
 
     return(
         <div>
-       <Button variant="primary" onClick={handleShow} className="botonMenu">
-       DISCOVER
-        </Button>
+    <p className="botonSup"><Button variant="primary" onClick={handleShow} className="botonMenu">
+       ☰
+        </Button></p>
 
       <Offcanvas show={show} onHide={handleClose} className="navBar">
         <Offcanvas.Header closeButton>
-          <Offcanvas.Title>MENU</Offcanvas.Title>
+          <Offcanvas.Title></Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body><ul>
            <a href="/location"><li className="buttonNav">Choose by location</li></a>

@@ -68,7 +68,7 @@ characters.forEach((characterURL) => {
 
 
         <Row className="feedLocation">
-                <h1 className="titlePrincipalFicha">Chargit acters of episode</h1>
+                <h1 className="titlePrincipalFicha">Characters of episode</h1>
                 {characterImageElements.map((imgElement, index) => (
                 <Col key={index} xs={12} md={6} lg={3} >
                 {imgElement}
