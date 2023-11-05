@@ -1,5 +1,5 @@
 import React, { useState} from "react";
-import {Offcanvas, Button, Col} from 'react-bootstrap';
+import {Offcanvas, Button} from 'react-bootstrap';
 
 
 
