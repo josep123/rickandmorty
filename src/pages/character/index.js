@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import {Table, Row, Col} from 'react-bootstrap';
 import FeedCharacters from '../../components/feedCharacters';
 
 function Character() {
